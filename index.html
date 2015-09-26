@@ -172,16 +172,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
-</blockquote>
-<blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
-<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>
-<blockquote><p>NEW: DevDocs now comes with syntax highlighting. <a href="http://devdocs.io" target="_blank" rel="external">http://devdocs.io</a></p>
-<footer><strong>@DevDocs</strong><cite><a href="https://twitter.com/devdocs/status/356095192085962752" target="_blank" rel="external">twitter.com/devdocs/status/356095192085962752</a></cite></footer></blockquote>
-<blockquote><p>Every interaction is both precious and an opportunity to delight.</p>
-<footer><strong>Seth Godin</strong><cite><a href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html" target="_blank" rel="external">Welcome to Island Marketing</a></cite></footer></blockquote>
-<figure class="highlight javascript"><figcaption><span>[title] [] [url] [link text]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print <span class="string">"hello world!"</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[rectangle setX: <span class="number">10</span> y: <span class="number">10</span> width: <span class="number">20</span> height: <span class="number">20</span>];</span><br></pre></td></tr></table></figure>
+        <p>什么是 Hexo？<br>    Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<p>安装前提<br>    安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：<br>    Node.js<br>    Git</p>
+<p>安装<br>    执行如下命令安装 Hexo<br>    <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
+<p>建站<br>    安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。<br>    <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &#60;folder&#62;&#10;$ cd &#60;folder&#62;&#10;$ npm install</span><br></pre></td></tr></table></figure></p>
+<p>_config.yml<br>    网站的 配置 信息，您可以在此配置大部分的参数。</p>
+<p>写文章<br>    <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &#60;title&#62;</span><br></pre></td></tr></table></figure><br>    新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
+<p>部署前操作<br>    _config.yml 中的全局配置 deploy 段如下：<br>        <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deploy:&#10;   type: git    #&#27880;&#24847;&#19981;&#26159;github&#10;   repository: https://github.com/&#60;username&#62;/&#60;username&#62;.github.io.git&#10;branch: master  #&#37096;&#32626;&#20998;&#25903;</span><br></pre></td></tr></table></figure></p>
+<p>更换主题<br>    下载<br>    <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure></p>
+<pre><code>配置
+    修改hexo根目录下的
+    <span class="comment"><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_config.yml&#65306; theme: yilia</span><br></pre></td></tr></table></figure></span>
+
+更新
+    <span class="comment"><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd themes/yilia&#10;git pull</span><br></pre></td></tr></table></figure></span>
+</code></pre><p>常用操作<br>    <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new default_layout &#60;article_name&#62;&#10;$ hexo clean&#9;#&#28165;&#38500;&#32531;&#23384; &#32593;&#39029;&#27491;&#24120;&#24773;&#20917;&#19979;&#21487;&#20197;&#24573;&#30053;&#27492;&#26465;&#21629;&#20196;&#10;$ hexo g &#9;&#9;#&#29983;&#25104;&#38745;&#24577;&#32593;&#39029; -generate&#10;$ hexo d &#9;&#9;#&#24320;&#22987;&#37096;&#32626; -deploy&#10;$ hexo server</span><br></pre></td></tr></table></figure></p>
+<p>草稿操作</p>
+<pre><code># 发表草稿
+<span class="comment"><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo publish [layout] &#60;article_name&#62;</span><br></pre></td></tr></table></figure></span>
+
+# 显示草稿
+<span class="comment"><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --draft</span><br></pre></td></tr></table></figure></span>
+</code></pre><p>更多资料请参考：<br>    hexo官方文档 <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/index.html</a></p>
 
       
     </div>
